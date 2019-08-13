@@ -9,7 +9,7 @@ package secondary;
  * 输出: 4
  * 解释: 最长的上升子序列是 [2,3,7,101]，它的长度是 4
  */
-public class Solution300 {
+public class 最长上升子序列_300 {
     /**
      * dp
      * 定义状态:dp[i]数组中最长子序列长度,i指的是数组中的每一个元素

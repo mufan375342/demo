@@ -8,7 +8,7 @@ import java.util.Set;
  * @time 2019/8/10
  * 链表是否有环
  */
-public class Solition141 {
+public class 链表是否有环_141 {
     /**
      * 双指针
      */

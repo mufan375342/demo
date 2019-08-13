@@ -6,7 +6,7 @@ package simple;
  * @time 2019/8/9
  * 二叉树的最大深度和最小深度
  */
-public class Solution111_114 {
+public class 二叉树深度_111_114 {
 
     private int mindepth(TreeNode root) {
         if (root == null) {

@@ -3,7 +3,7 @@ package secondary;
 /**
  * @author mufan
  * @time 2019/8/10
- * 最长回文字段
+ * 最长回文子串
  * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000
  * 输入: "babad"
  * 输出: "bab"
@@ -14,7 +14,7 @@ package secondary;
  * <p>
  * TODO Manacher算法有待学习
  */
-public class Solution5 {
+public class 最长回文子串_5 {
     /**
      * dp状态
      * dp[i][j]指的是字符串s中最长回文子串

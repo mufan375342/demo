@@ -5,10 +5,10 @@ import java.util.List;
 
 /**
  * @author mufan
- * @time 2019/8/8
+ * @time 2019/8/13
  * 求三角形最小路径
  */
-public class Solution120 {
+public class 三角形最小路径_120 {
     /**
      * 解法1:暴力,dfs解决,时间复杂度是指数级别的
      */
@@ -80,7 +80,7 @@ public class Solution120 {
         return temp[0];
     }
     public static void main(String[] args) {
-        Solution120 sol = new Solution120();
+        三角形最小路径_120 sol = new 三角形最小路径_120();
         int result = sol.minimumTotal1(Arrays.asList(
                 Arrays.asList(    2 ),
                 Arrays.asList(  3, 4),

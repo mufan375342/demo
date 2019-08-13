@@ -13,7 +13,7 @@ package simple;
  * 解释：输入的二进制串 00000000000000000000000010000000 中，共有一位为 '1'。
  * <p>
  */
-public class Solution191 {
+public class 二进制中1的个数_191 {
 
     public int hammingWeight(int n) {
         int count = 1;

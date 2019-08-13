@@ -8,7 +8,7 @@ package secondary;
  * 输入: "bbbab";输出:4;一个可能的最长回文子序列为 "bbbb"。
  * 输入: "cbbd";输出:2;一个可能的最长回文子序列为 "bb"。
  */
-public class Solution516 {
+public class 最长回文子序列_516 {
     public static void main(String[] args) {
         String s = "bbbab";
         System.out.println(longestPalindromeSubseq1(s));

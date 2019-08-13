@@ -15,7 +15,7 @@ import java.util.Arrays;
  * 输入: coins = [2], amount = 3
  * 输出: -1
  */
-public class Solution322 {
+public class 零钱兑换_322 {
     /**
      * dp
      * 状态定义
