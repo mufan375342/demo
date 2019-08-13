@@ -40,8 +40,9 @@ public class 滑动窗口最大值_239 {
         int[] res = new int[nums.length - k + 1];
         for (int i = 0; i < nums.length; i++) {
             if (!deque.isEmpty()) {
-                //先保证队列中的元素不超过k
-                if (i - deque.peek() + 1 > k) {
+                //先保证队列中的元素不超过k,这里不能使用deque.size()==k,因为如果窗口左边的元素是最大值，后续的值小的情况下就不对
+                //比如：1, 3, 1, 2, 0, 5
+                if (i - k == deque.peek()) {
                     //将第一个元素剔除队列
                     deque.remove();
                 }
@@ -77,7 +78,7 @@ public class 滑动窗口最大值_239 {
             }
         });
         for (int i = 0; i < nums.length; i++) {
-            if (priorityQueue.size() == k) {
+            if (priorityQueue.size() > k) {
                 priorityQueue.remove(nums[i - k]);
             }
             priorityQueue.add(nums[i]);
@@ -88,9 +89,47 @@ public class 滑动窗口最大值_239 {
         return res;
     }
 
+    /**
+     * dp
+     */
+    public static int[] maxSlidingWindow3(int[] nums, int k) {
+        int n = nums.length;
+        if (n == 0) {
+            return new int[0];
+        }
+        if (k == 1) {
+            return nums;
+        }
+        int[] left = new int[n];
+        left[0] = nums[0];
+        int[] right = new int[n];
+        right[n - 1] = nums[n - 1];
+        for (int i = 1; i < n; i++) {
+            // from left to right
+            if (i % k == 0) {
+                left[i] = nums[i];  // block_start
+            } else {
+                left[i] = Math.max(left[i - 1], nums[i]);
+            }
+            // from right to left
+            int j = n - i - 1;
+            if ((j + 1) % k == 0) {
+                right[j] = nums[j];  // block_end
+            } else {
+                right[j] = Math.max(right[j + 1], nums[j]);
+            }
+        }
+        int[] output = new int[n - k + 1];
+        for (int i = 0; i < n - k + 1; i++) {
+            output[i] = Math.max(left[i + k - 1], right[i]);
+        }
+
+        return output;
+    }
+
     public static void main(String[] args) {
-        int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
-        int[] ints = maxSlidingWindow1(nums, 3);
+        int[] nums = {1, 3, 1, 2, 0, 5};
+        int[] ints = maxSlidingWindow(nums, 3);
         for (int i = 0; i < ints.length; i++) {
             System.out.println(ints[i]);
         }
