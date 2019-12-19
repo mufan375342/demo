@@ -14,14 +14,11 @@ public class 链表反转 {
         //当前节点
         ListNode cur = head;
         while (cur != null) {
-            //指针一旦变动,链表就断开,所以需要将当前节点的后一个值记录下来
-            ListNode temp = cur.next;
             //指针反转
             cur.next = pre;
-            //反转之后前一个节点的值就会变化
+            //反转之后pre和cur的值就会进行变化
             pre = cur;
-            //当前节点变化
-            cur = temp;
+            cur = cur.next;
         }
         return pre;
     }
@@ -40,10 +37,9 @@ public class 链表反转 {
         if (cur == null) {
             return pre;
         }
-        ListNode temp = cur.next;
         cur.next = pre;
         pre = cur;
-        cur = temp;
+        cur = cur.next;
         return reverse(cur, pre);
     }
 
