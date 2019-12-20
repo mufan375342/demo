@@ -29,6 +29,7 @@ public class 链表两两反转 {
         return dump.next;
     }
 
+
     public static void main(String[] args) {
         ListNode head = new ListNode();
         ListNode second = new ListNode();
