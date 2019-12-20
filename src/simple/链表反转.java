@@ -14,33 +14,15 @@ public class 链表反转 {
         //当前节点
         ListNode cur = head;
         while (cur != null) {
+            //指针方向后移
+            ListNode temp = cur.next;
             //指针反转
             cur.next = pre;
             //反转之后pre和cur的值就会进行变化
             pre = cur;
-            cur = cur.next;
+            cur = temp;
         }
         return pre;
-    }
-
-    /**
-     * 反转链表(使用递归)
-     */
-    private ListNode reverseList2(ListNode head) {
-        if (head == null) {
-            return null;
-        }
-        return reverse(head, null);
-    }
-
-    private ListNode reverse(ListNode cur, ListNode pre) {
-        if (cur == null) {
-            return pre;
-        }
-        cur.next = pre;
-        pre = cur;
-        cur = cur.next;
-        return reverse(cur, pre);
     }
 
     public static void main(String[] args) {
@@ -60,14 +42,6 @@ public class 链表反转 {
         while (result != null) {
             System.out.println(result.val);
             result = result.next;
-        }
-
-        System.out.println("-------------------------------------");
-
-        ListNode result2 = test.reverseList2(forth);
-        while (result2 != null) {
-            System.out.println(result2.val);
-            result2 = result2.next;
         }
 
     }
