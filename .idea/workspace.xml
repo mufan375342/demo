@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="069e4357-c12f-46ec-97b2-c5d58ebff3f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/simple/链表K个一组反转.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/堆栈/左右括号匹配.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/243c2478f2595cb76f6aaf77f69e03dc0ec42ad5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/243c2478f2595cb76f6aaf77f69e03dc0ec42ad5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/3025020b3b01944c6f9e6296693cb0821c350b19" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/3025020b3b01944c6f9e6296693cb0821c350b19" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63f6c12e2eb4be54eb645d7e346fd2ca450f7ea1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63f6c12e2eb4be54eb645d7e346fd2ca450f7ea1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81c9d1d0bdd994672934158a85425c36adc321b8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/949c2fde062c01651fb65739f4fd2411b0d5378c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/949c2fde062c01651fb65739f4fd2411b0d5378c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b8c0ab329bdbff81c1c8404af2b2c554894f7d06" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b8c0ab329bdbff81c1c8404af2b2c554894f7d06" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c57cf30d5fe2aef532fe62a519c3e26575bb7e93" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c57cf30d5fe2aef532fe62a519c3e26575bb7e93" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/edb7c2730269e4a17d5ae1fb0b1c86056fdf171e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/edb7c2730269e4a17d5ae1fb0b1c86056fdf171e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/demo/simple/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/链表/ListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/删除链表节点_237.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/链表/删除链表节点_237.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/环形链表的起始点K.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/链表/环形链表的起始点K.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/链表K个一组反转.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/链表/链表K个一组反转.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/链表两两反转.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/链表/链表两两反转.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/链表反转.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/链表/链表反转.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/链表是否有环.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/链表/链表是否有环.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,49 +38,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="链表两两反转.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/simple/链表两两反转.java">
+        <entry file="file://$PROJECT_DIR$/src/链表/链表两两反转.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="链表K个一组反转.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/simple/链表K个一组反转.java">
+      <file leaf-file-name="链表K个一组反转.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/链表/链表K个一组反转.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="链表是否有环.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环.java">
+        <entry file="file://$PROJECT_DIR$/src/链表/链表是否有环.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="链表反转.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/simple/链表反转.java">
+        <entry file="file://$PROJECT_DIR$/src/链表/链表反转.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="环形链表的起始点K.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/simple/环形链表的起始点K.java">
+        <entry file="file://$PROJECT_DIR$/src/链表/环形链表的起始点K.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+            <state relative-caret-position="-30">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -72,20 +86,37 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ListNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/simple/ListNode.java">
+        <entry file="file://$PROJECT_DIR$/src/链表/ListNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="左右括号匹配.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/堆栈/左右括号匹配.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="删除链表节点_237.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/链表/删除链表节点_237.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-              <folding>
-                <element signature="e#176#177#0" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-              </folding>
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -162,6 +193,9 @@
         <option value="$PROJECT_DIR$/src/simple/环形链表的起始点K.java" />
         <option value="$PROJECT_DIR$/src/simple/K个一组反转链表.java" />
         <option value="$PROJECT_DIR$/src/simple/链表K个一组反转.java" />
+        <option value="$PROJECT_DIR$/src/链表/链表反转.java" />
+        <option value="$PROJECT_DIR$/src/链表/删除链表节点_237.java" />
+        <option value="$PROJECT_DIR$/src/堆栈/左右括号匹配.java" />
       </list>
     </option>
   </component>
@@ -187,11 +221,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1680" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="width" value="1680" />
+    <option name="height" value="962" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -199,8 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,11 +268,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="simple" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="堆栈" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="链表" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,7 +323,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.链表是否有环">
+  <component name="RunManager" selected="Application.左右括号匹配">
     <configuration name="你好" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="difficulty.你好" />
       <module name="demo" />
@@ -286,6 +331,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="difficulty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="左右括号匹配" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="堆栈.左右括号匹配" />
+      <module name="demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="堆栈.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -389,15 +445,11 @@
     <list>
       <item itemvalue="Application.你好" />
       <item itemvalue="Application.滑动窗口最大值_239" />
-      <item itemvalue="Application.链表反转" />
-      <item itemvalue="Application.链表两两反转" />
-      <item itemvalue="Application.链表是否有环" />
+      <item itemvalue="Application.左右括号匹配" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.链表是否有环" />
-        <item itemvalue="Application.链表反转" />
-        <item itemvalue="Application.链表两两反转" />
+        <item itemvalue="Application.左右括号匹配" />
         <item itemvalue="Application.滑动窗口最大值_239" />
         <item itemvalue="Application.你好" />
       </list>
@@ -423,7 +475,8 @@
       <workItem from="1570591983157" duration="628000" />
       <workItem from="1570598956794" duration="112000" />
       <workItem from="1576478288773" duration="648000" />
-      <workItem from="1576734917237" duration="21243000" />
+      <workItem from="1576734917237" duration="21463000" />
+      <workItem from="1577011702232" duration="2109000" />
     </task>
     <task id="LOCAL-00001" summary="滑动窗口最大值两种解法">
       <created>1565578502139</created>
@@ -488,14 +541,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576818873769</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="链表反转">
+      <created>1576828936407</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576828936407</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71499000" />
+    <option name="totallyTimeSpent" value="73828000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="23" width="1920" height="1057" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="962" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -509,16 +569,16 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2150289" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30751446" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.38265896" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.359375" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3583815" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.434375" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32395834" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14536741" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14713065" />
       <window_info anchor="bottom" id="Duplication Code Results" order="16" />
       <window_info anchor="bottom" id="SonarLint" order="16" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -562,19 +622,19 @@
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" weight="0.434375" />
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.16134185" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32945284" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20447284" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Duplication Code Results" order="18" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35833332" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32945284" />
       <window_info anchor="bottom" id="风险组件扫描" order="17" />
       <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info anchor="bottom" id="Duplication Code Results" order="18" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35833332" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,25 +647,18 @@
     <MESSAGE value="滑动窗口最大值两种解法" />
     <MESSAGE value="滑动窗口最大值动态规划" />
     <MESSAGE value="类名自改为中文" />
-    <MESSAGE value="链表反转" />
     <MESSAGE value="链表是否有环" />
     <MESSAGE value="环形链表的起始点K" />
-    <option name="LAST_COMMIT_MESSAGE" value="环形链表的起始点K" />
+    <MESSAGE value="链表反转" />
+    <option name="LAST_COMMIT_MESSAGE" value="链表反转" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="31" />
+      <option name="time" value="33" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环_141.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/删除链表节点_237.java">
+    <entry file="file://$PROJECT_DIR$/src/链表/删除链表节点_237.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
@@ -622,7 +675,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/ListNode.java">
+    <entry file="file://$PROJECT_DIR$/src/链表/ListNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
@@ -674,14 +727,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环_141.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/删除链表节点_237.java">
+    <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环_141.java" />
+    <entry file="file://$PROJECT_DIR$/src/链表/删除链表节点_237.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
@@ -698,7 +745,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/ListNode.java">
+    <entry file="file://$PROJECT_DIR$/src/链表/ListNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
@@ -750,14 +797,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环_141.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/删除链表节点_237.java">
+    <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环_141.java" />
+    <entry file="file://$PROJECT_DIR$/src/链表/删除链表节点_237.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
@@ -774,7 +815,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/ListNode.java">
+    <entry file="file://$PROJECT_DIR$/src/链表/ListNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
@@ -826,13 +867,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/secondary/Solution120.java" />
-    <entry file="file://$PROJECT_DIR$/src/simple/删除链表节点_237.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/simple/二进制中1的个数_191.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -895,73 +929,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/ListNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环_141.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环_141.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/链表是否有环.java">
+    <entry file="file://$PROJECT_DIR$/src/simple/K个一组反转链表.java" />
+    <entry file="file://$PROJECT_DIR$/src/链表/链表是否有环.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+        <state relative-caret-position="136">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/链表/链表K个一组反转.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/链表/链表两两反转.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/链表/链表反转.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/链表/ListNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/链表/删除链表节点_237.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/链表/环形链表的起始点K.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/堆栈/左右括号匹配.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/环形链表的起始点K.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/K个一组反转链表.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/链表反转.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/链表两两反转.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simple/链表K个一组反转.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
         </state>
       </provider>
     </entry>

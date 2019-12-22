@@ -1,4 +1,4 @@
-package simple;
+package 链表;
 
 /**
  * @author mufan

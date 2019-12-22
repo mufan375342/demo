@@ -1,4 +1,4 @@
-package simple;
+package 链表;
 
 import java.util.HashSet;
 import java.util.Set;

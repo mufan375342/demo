@@ -1,5 +1,5 @@
 
-Usquid:UnusedPrivateMethod"1Remove this unused private "minimumTotal" method.(¼ùÔE
-T
-squid:S106Z"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ
-jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(«ôõÏşÿÿÿÿ
+\squid:UnusedPrivateMethod"1Remove this unused private "minimumTotal" method.(¼ùÔE8Ïç‡ò-
+[
+squid:S106Z"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ8Ïç‡ò-
+qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(«ôõÏşÿÿÿÿ8Ïç‡ò-
