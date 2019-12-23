@@ -1,4 +1,4 @@
-package 堆栈;
+package 队列;
 
 import java.util.LinkedList;
 import java.util.Queue;
