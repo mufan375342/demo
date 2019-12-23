@@ -6,6 +6,7 @@ import java.util.PriorityQueue;
  * @author mufan
  * @date 2019/12/23
  * 优先队列默认的就是小顶堆
+ * 注意：是排序后的K大元素
  */
 public class 数据流中的K大元素 {
     int k;
@@ -18,14 +19,14 @@ public class 数据流中的K大元素 {
      */
     public 数据流中的K大元素(int k, int[] nums) {
         this.k = k;
+        priorityQueue = new PriorityQueue<>(k);
         for (int i = 0; i < nums.length; i++) {
             add(nums[i]);
         }
-
     }
 
     public int add(int val) {
-        priorityQueue = new PriorityQueue<>(k);
+
         if (priorityQueue.size() < k) {
             priorityQueue.offer(val);
         } else {
@@ -37,8 +38,21 @@ public class 数据流中的K大元素 {
         }
         return priorityQueue.peek().intValue();
     }
+
     /**
      * 第二种实现
      * 排序每进来一个元素的时候进行排序，时间复杂度是KlogK,因为需要处理N个元素,所以时间复杂度是N*KlogK
      */
+
+    public static void main(String[] args) {
+        int k = 3;
+        int[] arr = {4, 5, 8, 2};
+        数据流中的K大元素 kthLargest = new 数据流中的K大元素(3, arr);
+        System.out.println(kthLargest.add(3));// returns 4
+        System.out.println(kthLargest.add(5));// returns 5
+        System.out.println(kthLargest.add(10));// returns 5
+        System.out.println(kthLargest.add(9));// returns 8
+        System.out.println(kthLargest.add(4));// returns 8
+
+    }
 }
