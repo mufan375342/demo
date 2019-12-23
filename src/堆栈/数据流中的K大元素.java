@@ -7,6 +7,7 @@ import java.util.PriorityQueue;
  * @date 2019/12/23
  * 优先队列默认的就是小顶堆
  * 注意：是排序后的K大元素
+ * k就是第k大的数， 比如[1，2，3] 第1大的数是3，第2大的数字是2，第3大的数字是1
  */
 public class 数据流中的K大元素 {
     int k;
