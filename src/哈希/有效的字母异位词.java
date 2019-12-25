@@ -1,5 +1,6 @@
 package 哈希;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,8 +32,15 @@ public class 有效的字母异位词 {
         return map.equals(map1);
     }
 
+    public static boolean isAnagram2(String a, String b) {
+        char[] chars1 = a.toCharArray();
+        char[] chars2 = b.toCharArray();
+        Arrays.sort(chars1);
+        Arrays.sort(chars2);
+        return Arrays.toString(chars2).equals(Arrays.toString(chars1));
+    }
+
     public static void main(String[] args) {
-        System.out.println(isAnagram1("anagram",
-                "nagaram"));
+        System.out.println(isAnagram2("anagram", "nagaram"));
     }
 }
