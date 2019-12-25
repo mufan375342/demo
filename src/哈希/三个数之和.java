@@ -48,10 +48,52 @@ public class 三个数之和 {
         return res;
     }
 
+    /**
+     * 快速排序
+     */
+    public static int[] test(int[] nums, int start, int end) {
+        if (nums.length == 0) {
+            return nums;
+        }
+        int left = start;
+        int right = end;
+        int temp = nums[start];
+        while (left < right) {
+            //右边的指针进行移动,大于等于的在右边,小于的在左边
+            while (left < right && nums[right] >= temp) {
+                right--;
+            }
+            nums[left] = nums[right];
+            //左边的指针开始移动(注意这里可以是小于也可以是小于等于)
+            while (left < right && nums[left] <= temp) {
+                left++;
+            }
+            nums[right] = nums[left];
+        }
+        if (left == right) {
+            nums[left] = temp;
+        }
+        if (left != start) {
+            test(nums, 0, left - 1);
+        }
+        if (right != end) {
+            test(nums, right + 1, nums.length-1);
+        }
+        return nums;
+    }
+
 
 
     public static void main(String[] args) {
-        int[] nums = {-1, 0, 1, 2, -1, -4};
-        threeSum(nums);
+        int[] nums = {6,2,6,1,6,6};
+        int[] test = test(nums, 0, nums.length - 1);
+        for (int i = 0; i < test.length; i++) {
+            System.out.println(test[i]);
+        }
+        System.out.println("---------------------");
+        Arrays.sort(nums);
+        for (int i = 0; i < test.length; i++) {
+            System.out.println(test[i]);
+        }
     }
 }
