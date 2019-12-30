@@ -72,53 +72,60 @@ public class 树的中序前序后续遍历 {
         System.out.print(root.val + " ");
     }
 
+    // 非递归后序遍历
     public void postOrderTraversal1(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> treeNodeStack = new Stack<TreeNode>();
+        TreeNode node = root;
         TreeNode lastVisit = root;
-        while (root != null || !stack.isEmpty()) {
-            while (root != null) {
-                stack.push(root);
-                root = root.left;
+        while (node != null || !treeNodeStack.isEmpty()) {
+            while (node != null) {
+                treeNodeStack.push(node);
+                node = node.left;
             }
             //查看当前栈顶元素
-            root = stack.peek();
+            node = treeNodeStack.peek();
             //如果其右子树也为空，或者右子树已经访问
             //则可以直接输出当前节点的值
-            if (root.right == null || root.right == lastVisit) {
-                System.out.print(root.val + " ");
-                stack.pop();
-                lastVisit = root;
-                root = null;
+            if (node.right == null || node.right == lastVisit) {
+                System.out.print(node.val + " ");
+                treeNodeStack.pop();
+                lastVisit = node;
+                node = null;
             } else {
-                root = root.right;
+                //否则，继续遍历右子树
+                node = node.right;
             }
         }
     }
 
     public static TreeNode getTestTree() {
-        TreeNode[] nodes = new TreeNode[10];
-        for (int i = 0; i < nodes.length; i++) {
+        TreeNode[] nodes = new TreeNode[9];
+        for (int i = 1; i < nodes.length; i++) {
             nodes[i] = new TreeNode(i);
         }
-        nodes[0].left = nodes[1];
-        nodes[0].right = nodes[2];
-        nodes[1].left = nodes[3];
-        nodes[1].right = nodes[4];
-        nodes[2].left = nodes[5];
-        nodes[2].right = nodes[6];
-        nodes[3].left = nodes[7];
-        nodes[3].right = nodes[8];
-        nodes[4].left = nodes[9];
-        return nodes[0];
+        nodes[1].left = nodes[2];
+        nodes[1].right = nodes[3];
+        nodes[2].left = nodes[4];
+        nodes[3].right = nodes[5];
+        nodes[4].right = nodes[6];
+        nodes[6].left = nodes[7];
+        nodes[6].right = nodes[8];
+        return nodes[1];
     }
 
     public static void main(String[] args) {
-        //前序：0 1 3 7 8 4 9 2 5 6
-        //中序：7 3 8 1 9 4 0 5 2 6
-        //后续：7 8 3 9 4 1 5 6 2 0
+        /*          1
+         *      2       3
+         *  4             5
+         *      6
+         *  7       8
+         */
+        //先序：1 2 4 6 7 8 3 5
+        //中序：4 7 6 8 2 1 3 5
+        //后序：7 8 6 4 2 5 3 1
         树的中序前序后续遍历 test = new 树的中序前序后续遍历();
 //        test.preOrderTraversal(getTestTree());
-        test.sequentialTraversal(getTestTree());
+        test.postOrderTraversal1(getTestTree());
 //        test.postOrderTraversal(getTestTree());
     }
 }
