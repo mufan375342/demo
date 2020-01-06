@@ -7,3 +7,4 @@ important.properties
 common.properties
 dev-local.properties
 rebel.xml
+out
