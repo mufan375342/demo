@@ -1,4 +1,4 @@
-package simple;
+package 哈希;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import java.util.Map;
  * 输入: [2,2,1,1,1,2,2]
  * 输出: 2
  */
-public class 求众数_169 {
+public class 求众数 {
 
     /**
      * 暴力求解
