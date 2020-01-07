@@ -19,6 +19,7 @@ public class 树的中序前序后续遍历 {
         preOrderTraversal(root.left);
         preOrderTraversal(root.right);
     }
+
     /*          1
      *      2       3
      *  4             5
@@ -50,6 +51,7 @@ public class 树的中序前序后续遍历 {
         System.out.print(root.val + " ");
         sequentialTraversal(root.right);
     }
+
     /*          1
      *      2       3
      *  4             5
@@ -135,7 +137,21 @@ public class 树的中序前序后续遍历 {
         //后序：7 8 6 4 2 5 3 1
         树的中序前序后续遍历 test = new 树的中序前序后续遍历();
 //        test.preOrderTraversal(getTestTree());
-        test.postOrderTraversal1(getTestTree());
+        aa(getTestTree());
 //        test.postOrderTraversal(getTestTree());
+    }
+
+    public static void aa(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        while (node != null || !stack.isEmpty()) {
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            System.out.print(node.val);
+            node = node.right;
+        }
     }
 }
