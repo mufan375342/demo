@@ -19,7 +19,12 @@ public class 树的中序前序后续遍历 {
         preOrderTraversal(root.left);
         preOrderTraversal(root.right);
     }
-
+    /*          1
+     *      2       3
+     *  4             5
+     *      6
+     *  7       8
+     */
     public void preOrderTraversal1(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         while (root != null || !stack.isEmpty()) {
@@ -45,7 +50,12 @@ public class 树的中序前序后续遍历 {
         System.out.print(root.val + " ");
         sequentialTraversal(root.right);
     }
-
+    /*          1
+     *      2       3
+     *  4             5
+     *      6
+     *  7       8
+     */
     public void sequentialTraversal1(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         while (root != null || !stack.isEmpty()) {
