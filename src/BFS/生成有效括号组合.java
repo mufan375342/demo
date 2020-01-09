@@ -11,6 +11,7 @@ public class 生成有效括号组合 {
     public static List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
         dfs("", n, n, result);
+        dfs1("", 0, 0, result);
         return result;
     }
 
@@ -25,6 +26,20 @@ public class 生成有效括号组合 {
         }
         if (right > left) {
             dfs(subStr + ")", left, right - 1, result);
+        }
+    }
+
+    private static void dfs1(String subStr, int left, int right, List<String> result) {
+        if (left == 0 && right == 0) {
+            result.add(subStr);
+            return;
+        }
+        //先要填充左括号
+        if (left > 0) {
+            dfs(subStr + "(", left + 1, right, result);
+        }
+        if (right > left) {
+            dfs(subStr + ")", left, right + 1, result);
         }
     }
 
