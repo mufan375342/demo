@@ -1,5 +1,7 @@
 package 树;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -125,22 +127,23 @@ public class 树的中序前序后续遍历 {
         return nodes[1];
     }
 
-    public static void main(String[] args) {
-        /*          1
+    /*public static void main(String[] args) {
+        *//*          1
          *      2       3
          *  4             5
          *      6
          *  7       8
-         */
+         *//*
         //先序：1 2 4 6 7 8 3 5
         //中序：4 7 6 8 2 1 3 5
         //后序：7 8 6 4 2 5 3 1
         树的中序前序后续遍历 test = new 树的中序前序后续遍历();
+        test.postOrderTraversal1(getTestTree());
 //        test.preOrderTraversal(getTestTree());
         aa(getTestTree());
 //        test.postOrderTraversal(getTestTree());
     }
-
+*/
     public static void aa(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
@@ -154,4 +157,57 @@ public class 树的中序前序后续遍历 {
             node = node.right;
         }
     }
+
+    List<List<Integer>> res = new LinkedList<>();
+
+    /* 主函数，输入一组不重复的数字，返回它们的全排列 */
+    List<List<Integer>> permute(int[] nums) {
+        // 记录「路径」
+        LinkedList<Integer> track = new LinkedList<>();
+        backtrack(nums, track);
+        return res;
+    }
+
+    // 路径：记录在 track 中
+// 选择列表：nums 中不存在于 track 的那些元素
+// 结束条件：nums 中的元素全都在 track 中出现
+    void backtrack(int[] nums, LinkedList<Integer> track) {
+        // 触发结束条件
+        if (track.size() == nums.length) {
+            res.add(track);
+            return;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            // 排除不合法的选择
+            if (track.contains(nums[i]))
+                continue;
+            // 做选择
+            track.add(nums[i]);
+            // 进入下一层决策树
+            backtrack(nums, track);
+            // 取消选择
+            track.removeLast();
+        }
+    }
+
+    private static List<String> charToString(char[][] array) {
+        char[][] arr = new char[8][8];
+        List<String> result = new LinkedList<>();
+        for (char[] chars : array) {
+            result.add(String.valueOf(chars));
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        char[][] arr = new char[8][8];
+        List<String> result = new LinkedList<>();
+        for (char[] chars : arr) {
+            String s = String.valueOf(chars);
+            result.add(String.valueOf(chars));
+        }
+        System.out.println(result);
+    }
+
 }

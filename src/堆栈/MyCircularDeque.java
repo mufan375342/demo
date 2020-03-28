@@ -110,9 +110,82 @@ public class MyCircularDeque {
     }
 
     public static void main(String[] args) {
-        MyCircularDeque myCircularDeque = new MyCircularDeque(3);
-        myCircularDeque.insertFront(1);
-        myCircularDeque.insertFront(2);
+        int[] arr = {1, 2, 3, 4};
+        printPermutations(arr, 4, 4);
 
     }
+
+    public int numRookCaptures(char[][] board) {
+        //定义方向，上下左右，（0，1）（0，-1）（-1，0）（1，0）；
+        int[][] directions = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+        int res = 0;
+        //找白色的车
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (board[i][j] != 'R') {
+                    continue;
+                }
+                //找到了车之后上下左右移动
+                for (int[] direction : directions) {
+                    //只要不靠近边缘的情况下就一直走，知道找到卒位置
+                    int x = i;
+                    int y = j;
+                    while (x >= 0 && x < 8 && y >= 0 && y < 8) {
+                        //如果是友军直接返回，此路不通
+                        if (board[x][y] == 'B') {
+                            break;
+                        }
+                        //如果是敌军则拿下
+                        if (board[x][y] == 'p') {
+                            res += 1;
+                            break;
+                        }
+                        x += direction[0];
+                        y += direction[1];
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    public static void printPermutations(int[] data, int n, int k) {
+        if (k == 1) {
+            for (int i = 0; i < n; ++i) {
+                System.out.print(data[i] + " ");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < k; ++i) {
+            int tmp = data[i];
+            data[i] = data[k - 1];
+            data[k - 1] = tmp;
+
+            String s = "";
+            for (int j = 0; j < data.length; j++) {
+                s += " " + data[j];
+            }
+            System.out.println("----------"+s);
+
+            printPermutations(data, n, k - 1);
+
+            String s1 = "";
+            for (int j = 0; j < data.length; j++) {
+                s1 += " " + data[j];
+            }
+            System.out.println("++++++++++"+s1);
+
+            tmp = data[i];
+            data[i] = data[k - 1];
+            data[k - 1] = tmp;
+
+            String s3 = "";
+            for (int j = 0; j < data.length; j++) {
+                s3 += " " + data[j];
+            }
+            System.out.println("############"+s3);
+        }
+    }
+
+
 }

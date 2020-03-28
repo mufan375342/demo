@@ -17,7 +17,7 @@ public class ArrayStack {
      */
     private int n;
 
-    public ArrayStack(String[] items, int count, int n) {
+    public ArrayStack() {
         this.items = items;
         this.count = count;
         this.n = n;
