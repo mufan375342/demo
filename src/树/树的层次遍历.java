@@ -1,9 +1,6 @@
 package 树;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @author mufan
@@ -55,18 +52,16 @@ public class 树的层次遍历 {
      * 这里只能用递归实现,不能使用循环,循环就牵扯到了回溯的问题
      */
     private void DFS(TreeNode root, int level, List<List<Integer>> res) {
-        if(root==null){
+        if (root == null) {
             return;
         }
-        if(res.size()<level){
+        if (res.size() < level) {
             res.add(new ArrayList<>());
         }
-        res.get(level-1).add(root.val);
-        DFS(root.left,level+1,res);
-        DFS(root.right,level+1,res);
+        res.get(level - 1).add(root.val);
+        DFS(root.left, level + 1, res);
+        DFS(root.right, level + 1, res);
     }
-
-
 
 
     public static TreeNode getTestTree() {
@@ -99,5 +94,26 @@ public class 树的层次遍历 {
         List<List<Integer>> lists = test.levelOrder1(getTestTree());
         System.out.println(123);
 //        test.postOrderTraversal(getTestTree());
+    }
+
+    public List<List<Integer>> levelOrder3(TreeNode root) {
+        List<List<Integer>> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        dfs(root, 1, list);
+        return list;
+    }
+
+    private void dfs(TreeNode root, int level, List<List<Integer>> list) {
+        if (root == null) {
+            return;
+        }
+        if (list.size() < level) {
+            list.add(new ArrayList<>());
+        }
+        list.get(level-1).add(root.val);
+        dfs(root.left,level+1,list);
+        dfs(root.right,level+1,list);
     }
 }

@@ -1,8 +1,6 @@
 package 树;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author mufan
@@ -112,6 +110,54 @@ public class 树的中序前序后续遍历 {
         }
     }
 
+    // 非递归后序遍历
+    public List<Integer> postOrderTraversal2(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        TreeNode lastVisited = root;
+        while (!stack.isEmpty() || root != null) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            TreeNode peek = stack.peek();
+            //这一步有两种情况,右子树为空或者右子树已经被访问了
+            if (peek.right == null || lastVisited == peek.right) {
+                list.add(peek.val);
+                stack.pop();
+                lastVisited = peek;
+
+            } else {
+                root = peek.right;
+            }
+        }
+        return list;
+    }
+
+    public List<Integer> test(Node node) {
+        List<Integer> res = new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+        if (node == null) {
+            return res;
+        }
+        dfs(node, res);
+        return res;
+    }
+
+    private void dfs(Node node, List<Integer> res) {
+        if (node == null) {
+            return;
+        }
+        List<Node> childrens = node.children;
+        for (Node children : childrens) {
+            dfs(children, res);
+        }
+        res.add(node.val);
+    }
+
     public static TreeNode getTestTree() {
         TreeNode[] nodes = new TreeNode[9];
         for (int i = 1; i < nodes.length; i++) {
@@ -128,12 +174,12 @@ public class 树的中序前序后续遍历 {
     }
 
     /*public static void main(String[] args) {
-        *//*          1
-         *      2       3
-         *  4             5
-         *      6
-         *  7       8
-         *//*
+     *//*          1
+     *      2       3
+     *  4             5
+     *      6
+     *  7       8
+     *//*
         //先序：1 2 4 6 7 8 3 5
         //中序：4 7 6 8 2 1 3 5
         //后序：7 8 6 4 2 5 3 1
@@ -208,6 +254,83 @@ public class 树的中序前序后续遍历 {
             result.add(String.valueOf(chars));
         }
         System.out.println(result);
+    }
+
+    List<Integer> list = new ArrayList<>();
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+        if (root == null) {
+            return list;
+        }
+        postorderTraversal(root.left);
+        postorderTraversal(root.right);
+        list.add(root.val);
+        return list;
+    }
+
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        while (!stack.isEmpty() || root != null) {
+            if (root != null) {
+                stack.push(root);
+                root = root.left;
+            } else {
+                TreeNode pop = stack.pop();
+                list.add(pop.val);
+                root = pop.right;
+            }
+        }
+        return list;
+    }
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        Deque<TreeNode> deque = new ArrayDeque<>();
+        deque.push(root);
+        while (!deque.isEmpty()) {
+            List<Integer> li = new ArrayList<>();
+            for (int i = 0; i < deque.size(); i++) {
+                TreeNode poll = deque.poll();
+                li.add(poll.val);
+                if (poll.left != null) {
+                    deque.push(poll.left);
+
+                }
+                if (poll.right != null) {
+                    deque.push(poll.right);
+                }
+            }
+            list.add(li);
+        }
+        return list;
+    }
+
+    public List<List<Integer>> levelOrder1(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+        dfs(root, 1, res);
+        return res;
+    }
+
+    private void dfs(TreeNode root, int level, List<List<Integer>> res) {
+        if (root == null) {
+            return;
+        }
+        if (res.size() < level) {
+            res.add(new ArrayList<>());
+        }
+        res.get(level - 1).add(root.val);
+        dfs(root.left, level + 1, res);
+        dfs(root.right, level + 1, res);
     }
 
 }
