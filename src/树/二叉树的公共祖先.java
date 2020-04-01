@@ -26,23 +26,6 @@ public class 二叉树的公共祖先 {
         }
     }
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        while (root != null) {
-            //判断两个值是否都小于根节点
-            if (p.val < root.val && q.val < root.val) {
-                //直接排查左节点
-                root = root.left;
-            }
-            //判断两个值是否都大于右节点
-            else if (p.val > root.val && q.val > root.val) {
-                root = root.right;
-            } else {
-                return root;
-            }
-        }
-        return null;
-    }
-
     public TreeNode getTestTree() {
         /*            6
          *      2            8
@@ -88,7 +71,6 @@ public class 二叉树的公共祖先 {
 
         treeNode5.left = treeNode8;
         treeNode5.right = treeNode9;
-
         return treeNode5;
     }
 
