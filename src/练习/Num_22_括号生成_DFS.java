@@ -4,10 +4,11 @@ package 练习;
  * @author mufan
  * @date 2020/4/4
  */
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Num_22_括号生成 {
+public class Num_22_括号生成_DFS {
 
     // 把结果集保存在动态规划的数组里
 
@@ -37,6 +38,28 @@ public class Num_22_括号生成 {
             dp.add(cur);
         }
         return dp.get(n);
+    }
+
+    public List<String> generateParenthesis1(int n) {
+        List<String> res = new ArrayList<>();
+        if (n <= 0) {
+            return res;
+        }
+        dfs("", n, n, res);
+        return res;
+    }
+
+    private void dfs(String currStr, int left, int right, List<String> res) {
+        if (left == 0 && right == 0) {
+            res.add(currStr);
+            return;
+        }
+        if (left > 0) {
+            dfs(currStr + "(", left - 1, right, res);
+        }
+        if (left < right) {
+            dfs(currStr + ")", left, right - 1, res);
+        }
     }
 
     public static void main(String[] args) {
