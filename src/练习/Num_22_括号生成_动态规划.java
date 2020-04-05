@@ -32,7 +32,7 @@ public class Num_22_括号生成_动态规划 {
         for (int i = 1; i <= n; i++) {
             List<String> current = new ArrayList<>();
             for (int j = 0; j < i; j++) {
-                List<String> should = dp.get(i);
+                List<String> should = dp.get(j);
                 List<String> surplus = dp.get(i - j - 1);
                 for (String str1 : should) {
                     for (String str2 : surplus) {
