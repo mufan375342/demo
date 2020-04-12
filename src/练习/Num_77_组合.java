@@ -38,7 +38,7 @@ public class Num_77_组合 {
         //这里做了剪枝，可以这么理解，加入一共有5和元素，然后组成3个数的组合。
         //当选定了一个元素，即 list.size() == 1 的时候，接下来要选择 2 个元素， i 最大的值是 4 ，因为从 5 开始选择，就无解了；
         //当选定了两个元素，即 list.size() == 2 的时候，接下来要选择 1 个元素， i 最大的值是 5 ，因为从 6 开始选择，就无解了。
-        for (int i = begin; begin <= n - k + list.size() + 1; i++) {
+        for (int i = begin; i <= n - k + list.size() + 1; i++) {
             list.add(begin);
             dfs(begin + 1, n, k, list);
             list.remove(list.size() - 1);
