@@ -14,14 +14,17 @@ public class Num_74_二维矩阵搜索 {
         int col = matrix[0].length;
         int left = 0;
         int right = row * col - 1;
-        while (left < right) {
+        while (left <= right) {
             int mid = left + (right - left) / 2;
+            if (matrix[mid / col][mid % col] == target) {
+                return true;
+            }
             if (matrix[mid / col][mid % col] < target) {
                 left = mid + 1;
             } else {
-                right = mid;
+                right = mid - 1;
             }
         }
-        return matrix[left / col][left % col] == target;
+        return false;
     }
 }
