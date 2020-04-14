@@ -12,7 +12,7 @@ public class Num_45_跳跃游戏2 {
      * 3.每次从可以调到最大距离的元素开始跳，并且步数+1
      * <p>
      * 这里要注意一个细节，就是 for 循环中，i < nums.length - 1，少了末尾。因为开始的时候边界是第 0 个位置，
-     * steps 已经加 1 了。如下图，如果最后一步刚好跳到了末尾，此时 steps 其实不用加 1 了。
+     * steps 已经加 1 了。如果最后一步刚好跳到了末尾，此时 steps 其实不用加 1 了。
      * 如果是 i < nums.length，i 遍历到最后的时候，会进入 if 语句中，steps 会多加 1。
      */
     public int jump(int[] nums) {
@@ -22,6 +22,10 @@ public class Num_45_跳跃游戏2 {
         int maxposition = 0;
         //步数
         int step = 0;
+        // 这里nums.length-1说明的是因为第一步的时候+1了,
+        // 题目的意思是肯定能跳到末尾,这时候要么是超出末尾,这时候步数不用+1
+        // 要么刚好到lenth-2的位置这时候会进入到if语句step+1就会跳到最后一位,因为前面已经+1了,所以后面不需要加了,所以遍历到length-2就行
+        // 后续这类问题就考虑左边界和右边界
         for (int i = 0; i < nums.length - 1; i++) {
             maxposition = Math.max(maxposition, nums[i] + i);
             if (i == end) {
@@ -34,11 +38,12 @@ public class Num_45_跳跃游戏2 {
 
     /**
      * 顺瓜摸藤
+     * 我们知道最终要到达最后一个位置，然后我们找前一个位置，遍历数组，找到能到达它的位置，离它最远的就是要找的位置。然后继续找上上个位置，最后到了第 0 个位置就结束了。
+     * 至于离它最远的位置，其实我们从左到右遍历数组，第一个满足的位置就是我们要找的。
      */
     public int jump1(int[] nums) {
         int res = 0;
         int position = nums.length - 1;
-        //从前往后找能到达最后一个元素的位置，找到之后更新position,然后res+1,不断的重复此过程,知道position=0
         while (position != 0) {
             for (int i = 0; i < position; i++) {
                 if (position - i <= nums[i]) {
