@@ -58,4 +58,21 @@ public class Num_199_二叉树的右视图 {
         dfs(root.right, depth, list);
         dfs(root.left, depth, list);
     }
+
+    public static int fib(int n, int[] memo) {
+        if (n <= 1) {
+            return n;
+        }
+        if (memo[n] == 0) {
+            memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+        }
+        return memo[n];
+    }
+
+
+
+    public static void main(String[] args) {
+        int fib = fib(6, new int[7]);
+        System.out.println(fib);
+    }
 }
