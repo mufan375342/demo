@@ -6,7 +6,7 @@ package 练习;
  */
 public class Num_70_爬楼梯 {
     public int climbStairs(int n) {
-        if (n <= 1) {
+        if (n <= 2) {
             return n;
         }
         return climbStairs(n - 1) + climbStairs(n - 2);
