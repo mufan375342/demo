@@ -24,6 +24,7 @@ public class Num_63_不同路径2 {
             for (int j = 0; j < n; j++) {
                 if (obstacleGrid[i][j] == 1) {
                     dp[j] = 0;
+                    //用一维数组,如果j==0并且obstacleGrid[i][j] == 0是不参与计算的
                 } else if (j != 0 && obstacleGrid[i][j] == 0) {
                     dp[j] += dp[j - 1];
                 }
