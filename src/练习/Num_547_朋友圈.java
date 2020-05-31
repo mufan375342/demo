@@ -30,7 +30,9 @@ public class Num_547_朋友圈 {
     public int findCircleNum1(int[][] M) {
         int n = M.length;
         UnionFind uf = new UnionFind(n);
+        //因为是看第一个人和其他人是不是朋友.所以这里遍历的时候是n-1
         for (int i = 0; i < n - 1; i++) {
+            //和上面是同理
             for (int j = i + 1; j < n; j++) {
                 if (M[i][j] == 1) {
                     uf.union(i, j);
