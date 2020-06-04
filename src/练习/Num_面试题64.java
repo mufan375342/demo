@@ -47,4 +47,24 @@ public class Num_面试题64 {
         res += n;
         return res;
     }
+
+    public static double test(int N, int K, int W) {
+        int startGet = 1;
+        int record = 0;
+        for (int i = startGet; i < W; i++) {
+            int start = 0;
+            start = i + start;
+            if (start < K && K <= N) {
+                record++;
+                continue;
+            }
+            break;
+        }
+        return record / (double) W;
+    }
+
+    public static void main(String[] args) {
+        int N = 10, K = 1, W = 10;
+        System.out.println(test(N, K, W));
+    }
 }
