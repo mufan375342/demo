@@ -1,6 +1,5 @@
-package 练习;
+package 练习.并查集;
 
-import javafx.scene.Parent;
 
 /**
  * @author mufan
@@ -20,7 +19,7 @@ public class UnionFind {
     }
 
     public int find(int p) {
-        if (p != parent[p]) {
+        while (p != parent[p]) {
             parent[p] = parent[parent[p]];
             p = parent[p];
         }
@@ -35,5 +34,9 @@ public class UnionFind {
         }
         parent[rootP] = rootQ;
         count--;
+    }
+
+    public boolean isConnected(int p, int q) {
+        return find(p) == find(q);
     }
 }

@@ -1,6 +1,4 @@
-package 练习;
-
-import 练习.并查集.UnionFind;
+package 练习.并查集;
 
 /**
  * @author mufan
