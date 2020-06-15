@@ -11,44 +11,42 @@ public class Num_37_解数独 {
         }
         solve(board);
     }
-
     private boolean solve(char[][] board) {
-        for (int row = 0; row < board.length; row++) {
-            for (int col = 0; col < board[0].length; col++) {
-                if (board[row][col] != '.') {
-                    continue;
-                }
-                for (char k = '1'; k <= '9'; k++) {
-                    if (!isValid(board, row, col, k)) {
-                        continue;
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                //说明枚举的是需要填入的数字
+                if (board[i][j] == '.') {
+                    for (char c = '1'; c <= '9'; c++) {
+                        if (isValid(board, i, j, c)) {
+                            board[i][j] = c;
+                            if (solve(board)) {
+                                return true;
+                            } else {
+                                board[i][j] = '.';
+                            }
+                        }
                     }
-                    board[row][col] = k;
-                    if (solve(board)) {
-                        return true;
-                    }
-                    board[row][col] = '.';
+                    return false;
                 }
-                return false;
             }
         }
         return true;
     }
 
-    private boolean isValid(char[][] board, int row, int col, char k) {
-        for (int i = 1; i <= 9; i++) {
-            //校验行上是否合法
-            if (board[row][i] != '.' && board[row][i] == k) {
+    private boolean isValid(char[][] board, int row, int col, int c) {
+        for (int i = 0; i < 9; i++) {
+            if (board[i][col] != '.' && board[i][col] == c) {
                 return false;
             }
-            //校验列上是否合法
-            if (board[i][col] != '.' && board[i][col] == k) {
+            if (board[row][i] != '.' && board[row][i] == c) {
                 return false;
             }
-            //校验九宫格是否合法3*(row/3),3*(col/3)确定在哪个九宫格上
-            char c = board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3];
-            if (c != '.' && c == k) {
+            //确定实在那个3*3的区域
+            char c1 = board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3];
+            if (c1 != '.' && c1 == c) {
                 return false;
             }
+
         }
         return true;
     }
