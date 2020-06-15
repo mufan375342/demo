@@ -18,7 +18,7 @@ public class Num_37_解数独 {
                 if (board[row][col] != '.') {
                     continue;
                 }
-                for (char k = '0'; k < '9'; k++) {
+                for (char k = '1'; k <= '9'; k++) {
                     if (!isValid(board, row, col, k)) {
                         continue;
                     }
@@ -35,13 +35,16 @@ public class Num_37_解数独 {
     }
 
     private boolean isValid(char[][] board, int row, int col, char k) {
-        for (int i = 0; i < 9; i++) {
+        for (int i = 1; i <= 9; i++) {
+            //校验行上是否合法
             if (board[row][i] != '.' && board[row][i] == k) {
                 return false;
             }
+            //校验列上是否合法
             if (board[i][col] != '.' && board[i][col] == k) {
                 return false;
             }
+            //校验九宫格是否合法3*(row/3),3*(col/3)确定在哪个九宫格上
             char c = board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3];
             if (c != '.' && c == k) {
                 return false;
