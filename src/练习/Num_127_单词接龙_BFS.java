@@ -1,6 +1,7 @@
 package 练习;
 
 import javafx.util.Pair;
+import 堆栈.ArrayQuene;
 
 import java.util.*;
 
@@ -11,53 +12,51 @@ import java.util.*;
 public class Num_127_单词接龙_BFS {
 
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        //连通性对应的单词映射
-        Map<String, List<String>> map = new HashMap<>();
-        for (String word : wordList) {
-            for (int i = 0; i < word.length(); i++) {
-                String newWord = word.substring(0, i) + "*" + word.substring(i + 1);
-                List<String> list = map.getOrDefault(newWord, new ArrayList<>());
-                list.add(word);
-                map.put(newWord, list);
-            }
+        Set<String> wordSet = new HashSet<>(wordList);
+        if (wordSet.size() == 0 || !wordSet.contains(endWord)) {
+            return 0;
         }
+        wordSet.remove(beginWord);
 
-        //定义队列
-        Queue<Pair<String, Integer>> queue = new ArrayDeque<>();
-        queue.add(new Pair<>(beginWord, 1));
+        Queue<String> queue = new LinkedList<>();
+        queue.add(beginWord);
 
-        //剪枝-->访问过的元素无需再次访问
-        Map<String, Boolean> visited = new HashMap<>();
-        visited.put(beginWord, true);
+        int wordLen = beginWord.length();
 
-        //DFS
+        Set<String> visited = new HashSet<>();
+        visited.add(beginWord);
+
+        int step = 1;
+
         while (!queue.isEmpty()) {
-            Pair<String, Integer> poll = queue.poll();
-            String word = poll.getKey();
-            Integer level = poll.getValue();
-            for (int i = 0; i < beginWord.length(); i++) {
-                String newWord = word.substring(0, i) + "*" + word.substring(i + 1);
-                for (String s : map.getOrDefault(newWord,new ArrayList<>())) {
-                    if (endWord.equals(s)) {
-                        return level + 1;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                String word = queue.poll();
+                char[] wordCharArray = word.toCharArray();
+                for (int j = 0; j < wordLen; j++) {
+                    char org = wordCharArray[j];
+                    for (char k = 'a'; k <= 'z'; k++) {
+                        if (org == k) {
+                            continue;
+                        }
+                        wordCharArray[j] = k;
+                        String newWord = String.valueOf(wordCharArray);
+                        if (wordSet.contains(newWord)) {
+                            if (newWord.equals(endWord)) {
+                                return step + 1;
+                            }
+                            if (!visited.contains(newWord)) {
+                                queue.add(newWord);
+                                visited.add(newWord);
+                            }
+                        }
                     }
-                    if (!visited.containsKey(s)) {
-                        visited.put(s, true);
-                        queue.add(new Pair<>(s, level + 1));
-                    }
+                    wordCharArray[j] = org;
                 }
             }
+            step++;
         }
         return 0;
     }
-
-    public static void main(String[] args) {
-        Map<Integer, List<Integer>> map = new HashMap<>();
-        List<Integer> orDefault = map.getOrDefault(1, new ArrayList<>());
-        orDefault.add(2);
-        System.out.println(23);
-
-    }
-
 
 }
