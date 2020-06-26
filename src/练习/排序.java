@@ -1,5 +1,9 @@
 package 练习;
 
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 /**
  * @author mufan
  * @date 2020/6/22
@@ -69,17 +73,30 @@ public class 排序 {
         }
     }
 
+    /**
+     * 堆排序
+     */
+    public static void heapSort(int[] nums) {
+        Queue<Integer> heap = new PriorityQueue<>();
+        for (int i = 0; i < nums.length; i++) {
+            heap.add(nums[i]);
+        }
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = heap.poll();
+        }
+    }
+
     public static void main(String[] args) {
         int[] nums = {1, 4, 2, 3, 9, 6, 43};
         quickSort(nums, 0, nums.length - 1);
-        for (int num : nums) {
-            System.out.print(num);
-        }
-        System.out.println("----------");
+        System.out.println(Arrays.toString(nums));
 
-        mergeSort(nums, 0, nums.length - 1);
-        for (int num : nums) {
-            System.out.print(num);
-        }
+        int[] nums1 = {1, 4, 2, 3, 9, 6, 43};
+        mergeSort(nums1, 0, nums.length - 1);
+        System.out.println(Arrays.toString(nums1));
+
+        int[] nums2 = {1, 4, 2, 3, 9, 6, 43};
+        heapSort(nums2);
+        System.out.println(Arrays.toString(nums2));
     }
 }
