@@ -44,19 +44,15 @@ public class Num_5_最长回文子串 {
         if (s.length() < 2) {
             return s;
         }
-        int record = 1;
         String res = s.substring(0, 1);
         // 动态规划法
         boolean[][] dp = new boolean[s.length()][s.length()];
         //j从前往后填写
         for (int i = s.length() - 1; i >= 0; i--) {
             for (int j = i; j < s.length(); j++) {
-                if (s.charAt(i) == s.charAt(j) && (j - i < 2 || dp[i + 1][j - 1])) {
-                    dp[i][j] = true;
-                    if (j - i + 1 > record) {
-                        record = j - i + 1;
-                        res = s.substring(i, j + 1);
-                    }
+                dp[i][j] = s.charAt(i) == s.charAt(j) && (j - i < 2 || dp[i + 1][j - 1]);
+                if (dp[i][j] && j - i + 1 > res.length()) {
+                    res = s.substring(i, j + 1);
                 }
             }
         }
