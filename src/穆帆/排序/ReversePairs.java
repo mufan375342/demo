@@ -1,11 +1,11 @@
 package 穆帆.排序;
 
-import java.util.Arrays;
 
 /**
  * @author mufan
  * @date 2020/7/1
  */
+@SuppressWarnings("all")
 public class ReversePairs {
     public static int reversePairs(int[] nums) {
         return mergeSort(nums, 0, nums.length - 1);
