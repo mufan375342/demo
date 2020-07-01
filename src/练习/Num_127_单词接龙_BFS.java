@@ -1,8 +1,5 @@
 package 练习;
 
-import javafx.util.Pair;
-import 堆栈.ArrayQuene;
-
 import java.util.*;
 
 /**

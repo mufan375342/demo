@@ -1,6 +1,6 @@
 package 练习;
 
-import 链表.ListNode;
+import 练习.链表.ListNode;
 
 import java.util.Stack;
 

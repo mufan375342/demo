@@ -11,7 +11,7 @@ import java.util.Queue;
  */
 public class Num_515_在每个树行中找最大值 {
     /**
-     * BFS
+     * 练习.BFS
      */
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> res = new ArrayList<>();
