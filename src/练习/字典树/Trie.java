@@ -23,8 +23,7 @@ public class Trie {
         for (char c : word.toCharArray()) {
             int index = c - 'a';
             if (p.children[index] == null) {
-                TrieNode trieNode = new TrieNode(c);
-                p.children[index] = trieNode;
+                p.children[index] = new TrieNode(c);
             }
             p = p.children[index];
 
