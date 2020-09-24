@@ -8,6 +8,19 @@ import java.util.Map;
 /**
  * @author mufan
  * @date 2020/8/27
+ * 输入:
+ * s: "cbaebabacd" p: "abc"
+ *
+ * 输出:
+ * [0, 6]
+ *
+ * 解释:
+ * 起始索引等于 0 的子串是 "cba", 它是 "abc" 的字母异位词。
+ * 起始索引等于 6 的子串是 "bac", 它是 "abc" 的字母异位词。
+ *
+ * 链接：https://leetcode-cn.com/problems/find-all-anagrams-in-a-string
+ *
+ * 双指针维护一个滑动窗口，不断的往window中进行存放然后进行比较，比较的时候移动left
  */
 public class 字母异位词 {
 
