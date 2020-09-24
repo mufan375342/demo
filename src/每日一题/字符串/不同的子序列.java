@@ -7,6 +7,7 @@ package 每日一题.字符串;
 public class 不同的子序列 {
 
     public int numDistinct(String s, String t) {
+        //dp[i][j] 代表t的前i个字符串可以由s的前j个字符串组成的最多匹配的个数
         int[][] dp = new int[t.length() + 1][s.length() + 1];
         for (int i = 0; i < s.length(); i++) {
             dp[0][i] = 1;
