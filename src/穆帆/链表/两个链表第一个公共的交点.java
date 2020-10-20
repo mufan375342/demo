@@ -19,5 +19,6 @@ public class 两个链表第一个公共的交点 {
             l2 = l2 == null ? headA : l2.next;
         }
         return l1;
+
     }
 }
